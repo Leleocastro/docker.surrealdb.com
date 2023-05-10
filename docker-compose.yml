@@ -62,6 +62,14 @@ services:
   tikv0:
     container_name: surrealdb-tikv0
     image: pingcap/tikv:v6.1.0
+    deploy:
+      resources:
+        limits:
+          cpus: '0.02'
+          memory: 90M
+        reservations:
+          cpus: '0.01'
+          memory: 85M
     volumes:
       - ./data:/data
       - ./logs:/logs
@@ -80,6 +88,14 @@ services:
   tikv1:
     container_name: surrealdb-tikv1
     image: pingcap/tikv:v6.1.0
+    deploy:
+      resources:
+        limits:
+          cpus: '0.02'
+          memory: 90M
+        reservations:
+          cpus: '0.01'
+          memory: 85M
     volumes:
       - ./data:/data
       - ./logs:/logs
@@ -98,6 +114,14 @@ services:
   tikv2:
     container_name: surrealdb-tikv2
     image: pingcap/tikv:v6.1.0
+    deploy:
+      resources:
+        limits:
+          cpus: '0.02'
+          memory: 90M
+        reservations:
+          cpus: '0.01'
+          memory: 85M
     volumes:
       - ./data:/data
       - ./logs:/logs
