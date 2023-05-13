@@ -44,6 +44,7 @@ services:
     container_name: surrealdb-tikv0
     image: pingcap/tikv:v6.1.0
     deploy:
+      resources:
         limits:
           cpus: '0.8'
           memory: 1000M
